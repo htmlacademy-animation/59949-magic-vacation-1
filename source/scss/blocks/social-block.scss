@@ -6,6 +6,13 @@
       opacity: 1;
       pointer-events: auto;
     }
+
+    .social-block__link {
+      @media (orientation: landscape) {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }
 
@@ -63,7 +70,6 @@
     }
 
     & + .social-block__list {
-      opacity: 1;
       pointer-events: auto;
     }
   }
@@ -87,7 +93,6 @@
   top: 100%;
   right: 0;
   margin-top: 1.5rem;
-  opacity: 0;
   pointer-events: none;
 
   @media (min-width: $stop-scaling) {
@@ -100,7 +105,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 0;
-    opacity: 1;
     pointer-events: auto;
   }
 
@@ -110,8 +114,12 @@
     justify-content: center;
     align-items: center;
     margin-top: 0;
-    opacity: 1;
     pointer-events: auto;
+  }
+
+  @media (orientation: landscape) {
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
   }
 
   &::before {
@@ -133,7 +141,6 @@
   }
 
   &:focus-within {
-    opacity: 1;
     pointer-events: auto;
   }
 
@@ -184,6 +191,11 @@
     background-color: $c-dark;
   }
 
+  @media (orientation: landscape) {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
   &:hover {
     color: $c-purple;
   }
@@ -207,6 +219,8 @@
   }
 
   &--fb {
+    transition: opacity 0.2s ease-in 0s, transform 0.2s ease-in 0s;
+
     svg {
       width: 0.8rem;
       height: 1.7rem;
@@ -219,6 +233,8 @@
   }
 
   &--insta {
+    transition: opacity 0.2s ease-in 0.1s, transform 0.2s ease-in 0.1s;
+
     svg {
       width: 1.5rem;
       height: 1.5rem;
@@ -231,6 +247,8 @@
   }
 
   &--vk {
+    transition: opacity 0.2s ease-in 0.2s, transform 0.2s ease-in 0.2s;
+
     svg {
       width: 1.7rem;
       height: 1rem;
