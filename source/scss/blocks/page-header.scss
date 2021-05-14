@@ -35,6 +35,14 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  .page-is-loaded & {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
