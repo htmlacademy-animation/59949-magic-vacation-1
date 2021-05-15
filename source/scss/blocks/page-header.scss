@@ -89,6 +89,8 @@
   background-color: $c-light;
   border-radius: 50%;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease 0.1s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: block;
@@ -96,6 +98,10 @@
 
   @media (max-width: $mobile) and (orientation: landscape) {
     display: block;
+  }
+
+  .page-is-loaded & {
+    opacity: 1;
   }
 
   &::before,
