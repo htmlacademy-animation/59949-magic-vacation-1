@@ -36,12 +36,22 @@
   &::before {
     @include center;
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 0;
+    height: 0;
     border-radius: 50%;
     background-color: $c-light;
-    border: 2px solid $c-light;
+    border: none;
     z-index: -1;
+    transition:
+      width 0.4s cubic-bezier(0.43, 0.63, 0.45, 1.5) 0.2s,
+      height 0.4s cubic-bezier(0.43, 0.63, 0.45, 1.5) 0.2s,
+      border 0.1s ease 0.2s;
+
+    .page-is-loaded & {
+      width: 100%;
+      height: 100%;
+      border: 2px solid $c-light;
+    }
   }
 
   svg {
@@ -56,6 +66,7 @@
     color: $c-purple;
 
     &::before {
+      transition: width 0.2s ease, height 0.2s ease;
       width: 112.5%;
       height: 112.5%;
     }

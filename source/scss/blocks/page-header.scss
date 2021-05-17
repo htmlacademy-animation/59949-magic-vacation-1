@@ -35,6 +35,14 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  .page-is-loaded & {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -81,6 +89,8 @@
   background-color: $c-light;
   border-radius: 50%;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease 0.1s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: block;
@@ -88,6 +98,10 @@
 
   @media (max-width: $mobile) and (orientation: landscape) {
     display: block;
+  }
+
+  .page-is-loaded & {
+    opacity: 1;
   }
 
   &::before,
@@ -177,6 +191,12 @@
   font-size: 1.2rem;
   line-height: 1.0418;
   color: $c-light;
+  opacity: 0;
+  transition: opacity 1s ease 0.2s;
+
+  .page-is-loaded & {
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     font-size: 12px;
@@ -265,7 +285,10 @@
 
     &.active {
       &::after {
+        left: 0;
+        right: auto;
         width: 100%;
+        transition: width 0.3s ease 0.2s;
       }
     }
 

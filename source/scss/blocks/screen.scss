@@ -36,6 +36,12 @@
   left: 0;
   right: 0;
   z-index: 1;
+  transform: translateY(100%);
+  transition: transform 0.35s linear 0.1s;
+
+  .page-is-loaded & {
+    transform: translateY(0);
+  }
 }
 
 .screen__footer {
@@ -51,6 +57,12 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 0 3.6rem 0 0;
+    opacity: 0;
+    transition: opacity 1s ease 0.1s, width 0.4s ease, height 0.4s ease;
+
+    .page-is-loaded & {
+      opacity: 1;
+    }
 
     &.screen__footer--full {
       width: 100%;
@@ -62,10 +74,25 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 0 3.6rem 0 0;
+    opacity: 0;
+    transition: opacity 1s ease 0.1s, width 0.4s ease, height 0.4s ease;
+
+    .page-is-loaded & {
+      opacity: 1;
+    }
 
     &.screen__footer--full {
       width: 100%;
       height: 16rem;
+    }
+  }
+
+  @media (orientation: landscape) {
+    transform: translateY(100%);
+    transition: transform 0.35s linear 0.1s;
+
+    .page-is-loaded & {
+      transform: translateY(0);
     }
   }
 }
@@ -75,16 +102,20 @@
 
   @media (max-width: $tablet) and (orientation: portrait) {
     opacity: 0;
+    transition: opacity 0.3s ease;
 
     .screen__footer--full & {
+      transition: opacity 0.3s ease 0.3s;
       opacity: 1;
     }
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
     opacity: 0;
+    transition: opacity 0.3s ease;
 
     .screen__footer--full & {
+      transition: opacity 0.3s ease 0.3s;
       opacity: 1;
     }
   }
@@ -144,8 +175,10 @@
     display: block;
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s ease;
 
     .screen__footer--full & {
+      transition: opacity 0.3s ease 0.3s;
       opacity: 1;
       pointer-events: auto;
     }
@@ -155,8 +188,10 @@
     display: block;
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s ease;
 
     .screen__footer--full & {
+      transition: opacity 0.3s ease 0.3s;
       opacity: 1;
       pointer-events: auto;
     }
