@@ -45,7 +45,11 @@
       }
 
       @media (orientation: landscape) {
-        transition: opacity 0.3s ease-in-out 0.4s, transform 0.3s ease-in-out 0.4s;
+        transition: opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+
+        .active & {
+          transition: opacity 0.3s ease-in-out 0.4s, transform 0.3s ease-in-out 0.4s;
+        }
       }
     }
   }
@@ -102,7 +106,11 @@
   line-height: 2rem;
   opacity: 0;
   transform: translateX(20px);
-  transition: opacity 0.3s ease-in-out 0.2s, transform 0.3s ease-in-out 0.2s;
+  transition: opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+
+  .active & {
+    transition: opacity 0.3s ease-in-out 0.2s, transform 0.3s ease-in-out 0.2s;
+  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
