@@ -123,6 +123,7 @@
   padding-top: 0.6rem;
   padding-left: 6.5rem;
   break-inside: avoid;
+  will-change: transform;
 
   @media (min-width: $stop-scaling) {
     margin: 0 0 62px;
