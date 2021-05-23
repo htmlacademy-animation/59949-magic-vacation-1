@@ -5,7 +5,7 @@ export default () => {
     switch (evt.detail.screenName) {
       case `top`:
         textTransform(evt.detail.screenElement, `.intro__title`);
-        textTransform(evt.detail.screenElement, `.intro__date`);
+        textTransform(evt.detail.screenElement, `.intro__date`, 1200);
         break;
       case `story`:
         textTransform(evt.detail.screenElement, `.slider__item-title`);
