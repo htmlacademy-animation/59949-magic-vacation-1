@@ -17,15 +17,32 @@ class TextTransformAnimation {
     }
   }
 
+  createElem(elem) {
+    return document.createElement(elem);
+  }
+
   createString(strings) {
     strings.forEach((string) => {
-      let stringContainer = document.createElement(`span`);
-
+      let stringContainer = this.createElem(`span`);
       stringContainer.classList.add(`animated-text__string`);
-      stringContainer.innerText = string.trim();
+
+      const lettersArr = string.trim().split(``);
+
+      this.createLetter(lettersArr, stringContainer);
 
       this._element.appendChild(stringContainer);
-      this._element.appendChild(document.createElement(`br`));
+      this._element.appendChild(this.createElem(`br`));
+    });
+  }
+
+  createLetter(letters, element) {
+    letters.forEach((letter) => {
+      let letterContainer = this.createElem(`span`);
+
+      letterContainer.innerText = letter;
+      letterContainer.classList.add(`animated-text__letter`);
+
+      element.appendChild(letterContainer);
     });
   }
 }
