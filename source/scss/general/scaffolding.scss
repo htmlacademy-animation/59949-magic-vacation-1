@@ -107,6 +107,7 @@ img {
   }
 
   &__letter {
+    will-change: transform;
     display: inline-block;
     transform: translateY(120%);
     vertical-align: sub;
