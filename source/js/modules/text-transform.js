@@ -5,6 +5,7 @@ class TextTransformAnimation {
     this._duration = 700;
     this._timingFunction = `ease`;
     this._delay = 0;
+    this._stringNumber = 0;
   }
 
   init() {
@@ -23,7 +24,9 @@ class TextTransformAnimation {
   }
 
   createString(strings) {
-    strings.forEach((string) => {
+    strings.forEach((string, index) => {
+      this._stringNumber = index;
+
       let stringContainer = this.createElem(`span`);
       stringContainer.classList.add(`animated-text__string`);
 
@@ -50,8 +53,16 @@ class TextTransformAnimation {
   }
 
   addTransition(elem) {
+    this.generateRandomDelayTime();
     elem.style.transition = `${this._property} ${this._duration}ms ${this._timingFunction} ${this._delay}ms`;
-    this._delay += 20;
+  }
+
+  generateRandomDelayTime() {
+    const maxMS = 250;
+    const minMS = 0;
+    const stepMS = 330;
+
+    this._delay = Math.floor(Math.random() * (maxMS - minMS)) + (stepMS * this._stringNumber);
   }
 }
 
