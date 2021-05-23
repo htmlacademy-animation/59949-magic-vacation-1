@@ -12,6 +12,7 @@ class TextTransformAnimation {
 
     if (stringsArr.length) {
       this._element.innerHTML = ``;
+      this._element.classList.add(`animated-text`);
 
       this.createString(stringsArr);
     }
@@ -42,8 +43,15 @@ class TextTransformAnimation {
       letterContainer.innerText = letter;
       letterContainer.classList.add(`animated-text__letter`);
 
+      this.addTransition(letterContainer);
+
       element.appendChild(letterContainer);
     });
+  }
+
+  addTransition(elem) {
+    elem.style.transition = `${this._property} ${this._duration}ms ${this._timingFunction} ${this._delay}ms`;
+    this._delay += 20;
   }
 }
 

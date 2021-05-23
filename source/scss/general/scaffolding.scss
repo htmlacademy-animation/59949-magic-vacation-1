@@ -99,3 +99,20 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.animated-text {
+  &__string {
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  &__letter {
+    display: inline-block;
+    transform: translateY(120%);
+    vertical-align: sub;
+
+    .page-is-loaded .active & {
+      transform: translateY(0);
+    }
+  }
+}
