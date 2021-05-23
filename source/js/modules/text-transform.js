@@ -3,7 +3,7 @@ class TextTransformAnimation {
     this._element = element;
     this._property = `transform`;
     this._duration = 700;
-    this._timingFunction = `ease`;
+    this._timingFunction = `cubic-bezier(0.33, 0.23, 0.17, 0.87)`;
     this._delay = 0;
     this._stringNumber = 0;
   }
