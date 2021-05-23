@@ -76,6 +76,12 @@ export default (screenElement, className) => {
     return;
   }
 
+  const textIsAnimated = textElement.classList.contains(`animated-text`);
+
+  if (textIsAnimated) {
+    return;
+  }
+
   const textTransform = new TextTransformAnimation(textElement);
   textTransform.init();
 };
