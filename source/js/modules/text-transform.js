@@ -7,7 +7,27 @@ class TextTransformAnimation {
     this._delay = 0;
   }
 
-  init() {}
+  init() {
+    const stringsArr = this._element.innerHTML.trim().split(`<br>`);
+
+    if (stringsArr.length) {
+      this._element.innerHTML = ``;
+
+      this.createString(stringsArr);
+    }
+  }
+
+  createString(strings) {
+    strings.forEach((string) => {
+      let stringContainer = document.createElement(`span`);
+
+      stringContainer.classList.add(`animated-text__string`);
+      stringContainer.innerText = string.trim();
+
+      this._element.appendChild(stringContainer);
+      this._element.appendChild(document.createElement(`br`));
+    });
+  }
 }
 
 export default (screenElement, className) => {
