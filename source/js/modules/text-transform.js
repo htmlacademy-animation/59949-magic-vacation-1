@@ -42,11 +42,14 @@ class TextTransformAnimation {
   createLetter(letters, element) {
     letters.forEach((letter) => {
       let letterContainer = this.createElem(`span`);
-
       letterContainer.innerText = letter;
-      letterContainer.classList.add(`animated-text__letter`);
 
-      this.addTransition(letterContainer);
+      if (letter === ` `) {
+        letterContainer.classList.add(`animated-text__space`);
+      } else {
+        letterContainer.classList.add(`animated-text__letter`);
+        this.addTransition(letterContainer);
+      }
 
       element.appendChild(letterContainer);
     });
