@@ -19,6 +19,12 @@
   padding: 14.6rem 4rem 10rem 9.7rem;
   height: auto;
 
+  @media (orientation: landscape) {
+    &:first-child .slider__item-text {
+      margin-top: 2.5rem;
+    }
+  }
+
   @media (min-width: $stop-scaling) {
     padding: 146px 40px 100px 97px;
   }
@@ -74,7 +80,7 @@
 }
 
 .slider__item-title {
-  margin: 0 0 0 -5.5rem;
+  margin: -1rem 0 0 -5.5rem;
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
