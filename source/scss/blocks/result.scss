@@ -104,6 +104,114 @@
     animation-delay: 0s, 500ms;
     animation-iteration-count: 1, infinite;
   }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    &-leaf-1 {
+      width: 12.7rem;
+      top: 11rem;
+      margin-left: 15.5rem;
+    }
+
+    &-leaf-2 {
+      width: 12rem;
+      top: 15.7rem;
+      margin-left: -16.7rem;
+    }
+
+    &-leaf-green {
+      width: 15.5rem;
+      top: 17.9rem;
+      margin-left: 17.4rem;
+    }
+
+    &-suitcase {
+      width: 16rem;
+      top: 11.4rem;
+      margin-left: 0;
+    }
+
+    &-flamingo {
+      width: 13rem;
+      top: 14.5rem;
+      margin-left: -6rem;
+    }
+
+    @media (min-width: $mobile) {
+      &-leaf-1 {
+        top: 8rem;
+      }
+
+      &-leaf-2 {
+        top: 12.7rem;
+      }
+
+      &-leaf-green {
+        top: 14.9rem;
+      }
+
+      &-suitcase {
+        top: 8.4rem;
+      }
+
+      &-flamingo {
+        top: 11.5rem;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) and (orientation: landscape) {
+    &-leaf-1 {
+      top: 2.2rem;
+    }
+
+    &-leaf-2 {
+      top: 12rem;
+    }
+
+    &-leaf-green {
+      top: 16.2rem;
+    }
+
+    &-suitcase {
+      top: 3.5rem;
+    }
+
+    &-flamingo {
+      top: 10.2rem;
+    }
+
+    @media (max-width: $mobile) {
+      &-leaf-1 {
+        width: 12.7rem;
+        top: 6rem;
+        margin-left: 15.5rem;
+      }
+
+      &-leaf-2 {
+        width: 12rem;
+        top: 10.7rem;
+        margin-left: -16.7rem;
+      }
+
+      &-leaf-green {
+        width: 15.5rem;
+        top: 12.9rem;
+        margin-left: 17.4rem;
+      }
+
+      &-suitcase {
+        width: 16rem;
+        top: 6.4rem;
+        margin-left: 0;
+      }
+
+      &-flamingo {
+        width: 13rem;
+        top: 9.5rem;
+        margin-left: -6rem;
+      }
+    }
+  }
 }
 
 .result__title {
