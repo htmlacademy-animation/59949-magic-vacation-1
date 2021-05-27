@@ -38,6 +38,7 @@
   img {
     display: block;
     position: absolute;
+    will-change: transform;
   }
 
   &-leaf-1 {
