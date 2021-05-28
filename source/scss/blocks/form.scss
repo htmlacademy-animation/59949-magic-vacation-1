@@ -44,7 +44,6 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
-  transition: flex-grow 0.35s ease-out, padding 0s linear 0.1s;
 
   &:focus {
     border: 1px solid $c-purple;
@@ -56,8 +55,18 @@
     transition: opacity 0.2s ease-in 0.3s;
   }
 
+  .screen--game & {
+    transition: flex-grow 0.35s ease-out 0s, padding 0s linear 0.1s;
+  }
+
+  .form--result & {
+    opacity: 0;
+    transition: flex-grow 0.4s ease-out 0.47s, padding 0s linear 0.1s, opacity 0.15s ease-in 0.35s;
+  }
+
   @media (min-width: $stop-scaling) {
     margin-right: 30px;
+    width: 6rem;
     height: 60px;
     font-size: 24px;
     border-radius: 30px;
@@ -65,12 +74,14 @@
 
   @media (orientation: portrait) {
     margin-right: 1rem;
+    width: 4rem;
     height: 4rem;
     font-size: 1.6rem;
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
     margin-right: 1rem;
+    width: 4rem;
     height: 4rem;
     font-size: 1.6rem;
   }
@@ -79,6 +90,7 @@
   .screen--show & {
     flex-grow: 1;
     padding: 0 5.6rem;
+    opacity: 1;
 
     @media (min-width: $stop-scaling) {
       padding: 0 56px;
@@ -99,7 +111,26 @@
 }
 
 .form__button {
-  width: 17.8rem;
+  color: transparent;
+
+  .screen--game & {
+    transition: color 0.3s ease-in 0s;
+
+    @media (min-width: $tablet) and (orientation: landscape) {
+      width: 17.8rem;
+    }
+  }
+
+  .form--result & {
+    opacity: 0;
+    transition: color 0.3s ease-in 0.4s, opacity 0.15s ease-in 0.35s;
+  }
+
+  .active &,
+  .screen--show & {
+    color: $c-dark;
+    opacity: 1;
+  }
 
   @media (orientation: portrait) {
     position: relative;
@@ -147,22 +178,18 @@
 
 .form--result {
   .form__field {
-    //width: calc(100% - 31rem);
-
-    @media (min-width: $stop-scaling) {
-      width: calc(100% - 310px);
-    }
+    width: 6rem;
 
     @media (orientation: portrait) {
-      width: calc(100% - 5rem);
+      width: 4rem;
     }
 
     @media (max-width: $tablet) and (orientation: landscape) {
-      width: calc(100% - 9rem);
+      width: 6rem;
     }
 
     @media (max-width: $mobile) and (orientation: landscape) {
-      width: calc(100% - 5rem);
+      width: 4rem;
     }
   }
 }
