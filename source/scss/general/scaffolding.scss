@@ -99,3 +99,26 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.animated-text {
+  &__string {
+    display: inline-block;
+    overflow: hidden;
+    padding-right: 5px;
+  }
+
+  &__letter {
+    will-change: transform;
+    display: inline-block;
+    transform: translateY(120%);
+    vertical-align: sub;
+
+    .page-is-loaded .active & {
+      transform: translateY(0);
+    }
+  }
+
+  &__space {
+    display: inline;
+  }
+}

@@ -29,13 +29,13 @@ $btn-delay: 0.2s;
 }
 
 .rules__title {
-  margin: 0 0 5rem;
+  margin: -1rem 0 4rem;
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
   font-size: 4.8rem;
   line-height: 0.906;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
 
   @media (min-width: $stop-scaling) {
     margin-bottom: 50px;
