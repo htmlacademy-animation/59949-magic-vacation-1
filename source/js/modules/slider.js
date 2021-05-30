@@ -12,6 +12,10 @@ export default () => {
   const pageContainer = document.body;
 
   const setSlider = function () {
+    if (storySlider) {
+      storySlider.destroy();
+    }
+
     setBackgroundImage();
     setColorThemeAttr();
 
@@ -108,12 +112,18 @@ export default () => {
     }
   };
 
-  window.addEventListener(`resize`, function () {
-    if (storySlider) {
+  const removeSlider = (evt) => {
+    if (evt.detail.screenName !== `story`) {
+      window.removeEventListener(`resize`, setSlider);
+      document.body.removeEventListener(`screenChanged`, removeSlider);
+
+      pageContainer.dataset.colorTheme = ``;
       storySlider.destroy();
     }
-    setSlider();
-  });
+  };
+
+  window.addEventListener(`resize`, setSlider);
+  document.body.addEventListener(`screenChanged`, removeSlider);
 
   setSlider();
 };
