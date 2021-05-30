@@ -17,6 +17,11 @@ export default () => {
 
   for (let i = 0; i < menuLinks.length; i++) {
     menuLinks[i].addEventListener(`click`, function (evt) {
+      if (window.location.hash === evt.target.hash) {
+        evt.preventDefault();
+        return;
+      }
+
       if (window.innerWidth < 1025) {
         header.classList.remove(`page-header--menu-opened`);
         document.body.classList.remove(`menu-opened`);
