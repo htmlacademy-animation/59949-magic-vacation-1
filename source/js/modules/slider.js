@@ -9,8 +9,11 @@ export default () => {
   const slide3Background = `url("img/slide3.jpg"), linear-gradient(180deg, rgba(92, 138, 198, 0) 0%, #5183C4 16.85%)`;
   const slide4Background = `url("img/slide4.jpg"), linear-gradient(180deg, rgba(45, 39, 63, 0) 0%, #2F2A42 16.85%)`;
 
+  const pageContainer = document.body;
+
   const setSlider = function () {
     setBackgroundImage();
+    setColorThemeAttr();
 
     if (((window.innerWidth / window.innerHeight) < 1) || window.innerWidth < 769) {
       storySlider = new Swiper(`.js-slider`, {
@@ -24,6 +27,7 @@ export default () => {
         on: {
           slideChange: () => {
             setBackgroundImage(storySlider.activeIndex);
+            setColorThemeAttr(storySlider.activeIndex);
           },
           resize: () => {
             storySlider.update();
@@ -50,6 +54,7 @@ export default () => {
         on: {
           slideChange: () => {
             setBackgroundImage(storySlider.activeIndex);
+            setColorThemeAttr(storySlider.activeIndex);
           },
           resize: () => {
             storySlider.update();
@@ -78,6 +83,27 @@ export default () => {
       case 6:
       case 7:
         sliderContainer.style.backgroundImage = slide4Background;
+        break;
+    }
+  };
+
+  const setColorThemeAttr = (index = 0) => {
+    switch (index) {
+      case 0:
+      case 1:
+        pageContainer.dataset.colorTheme = `dark-purple`;
+        break;
+      case 2:
+      case 3:
+        pageContainer.dataset.colorTheme = `soft-blue`;
+        break;
+      case 4:
+      case 5:
+        pageContainer.dataset.colorTheme = `bright-blue`;
+        break;
+      case 6:
+      case 7:
+        pageContainer.dataset.colorTheme = `purple`;
         break;
     }
   };
