@@ -1,6 +1,13 @@
 .disclaimer {
   color: $c-dark;
   background-color: $c-light;
+  transition: color 0.35s ease-in 0s;
+
+  .text--hidden & {
+    @media (min-width: $mobile) and (orientation: landscape) {
+      color: transparent;
+    }
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     font-weight: 400;
