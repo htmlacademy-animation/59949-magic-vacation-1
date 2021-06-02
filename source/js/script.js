@@ -1,6 +1,5 @@
 // modules
 import mobileHeight from './modules/mobile-height-adjust.js';
-import slider from './modules/slider.js';
 import menu from './modules/menu.js';
 import footer from './modules/footer.js';
 import chat from './modules/chat.js';
@@ -12,7 +11,6 @@ import FullPageScroll from './modules/full-page-scroll';
 
 // init modules
 mobileHeight();
-slider();
 menu();
 footer();
 chat();

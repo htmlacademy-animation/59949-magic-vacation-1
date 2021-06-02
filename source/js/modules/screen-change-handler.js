@@ -1,4 +1,5 @@
 import textTransform from './text-transform';
+import slider from './slider';
 
 export default () => {
   document.body.addEventListener(`screenChanged`, (evt) => {
@@ -8,6 +9,7 @@ export default () => {
         textTransform(evt.detail.screenElement, `.intro__date`, 1200);
         break;
       case `story`:
+        slider();
         textTransform(evt.detail.screenElement, `.slider__item-title`);
         break;
       case `prizes`:

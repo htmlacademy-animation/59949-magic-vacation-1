@@ -303,6 +303,40 @@
         width: 100%;
         background-color: $c-purple;
       }
+
+      @media (min-width: $mobile) and (orientation: landscape) {
+        body[data-color-theme="purple"] & {
+          color: $c-purple;
+
+          &::after {
+            background-color: $c-purple;
+          }
+        }
+
+        body[data-color-theme="dark-purple"] & {
+          color: $c-dark;
+
+          &::after {
+            background-color: $c-dark;
+          }
+        }
+
+        body[data-color-theme="bright-blue"] & {
+          color: $c-bright-blue;
+
+          &::after {
+            background-color: $c-bright-blue;
+          }
+        }
+
+        body[data-color-theme="soft-blue"] & {
+          color: $c-soft-blue;
+
+          &::after {
+            background-color: $c-soft-blue;
+          }
+        }
+      }
     }
   }
 }

@@ -42,6 +42,10 @@
   .page-is-loaded & {
     transform: translateY(0);
   }
+
+  &.footer--hidden {
+    transform: translateY(100%);
+  }
 }
 
 .screen__footer {
@@ -93,6 +97,10 @@
 
     .page-is-loaded & {
       transform: translateY(0);
+    }
+
+    &.footer--hidden {
+      transform: translateY(100%);
     }
   }
 }
@@ -240,6 +248,13 @@
   text-align: center;
   font-size: 1.2rem;
   line-height: 1.2;
+  transition: color 0.35s ease-in 0s;
+
+  .text--hidden & {
+    @media (min-width: $mobile) and (orientation: landscape) {
+      color: transparent;
+    }
+  }
 
   @media (min-width: $stop-scaling) {
     padding: 8px 0;

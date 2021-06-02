@@ -22,7 +22,7 @@
   display: block;
   width: 4rem;
   height: 4rem;
-  color: $c-dark;
+  color: $c-purple;
   border-radius: 50%;
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -128,7 +128,7 @@
     pointer-events: auto;
   }
 
-  @media (orientation: landscape) {
+  @media (min-width: $mobile) and (orientation: landscape) {
     opacity: 0;
     transition: opacity 0.15s ease-out;
   }
@@ -202,7 +202,7 @@
     background-color: $c-dark;
   }
 
-  @media (orientation: landscape) {
+  @media (min-width: $mobile) and (orientation: landscape) {
     opacity: 0;
     transform: translateY(10px);
   }
@@ -267,6 +267,185 @@
       @media (min-width: $stop-scaling) {
         width: 10px;
         height: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: $mobile) and (orientation: landscape) {
+  body[data-color-theme="purple"] {
+    .social-block__toggler {
+      color: $c-dark;
+
+      &:hover {
+        color: $c-purple;
+      }
+
+      &:focus {
+        color: $c-purple;
+
+        &::before {
+          border-color: currentColor;
+        }
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-light;
+        background-color: $c-purple;
+
+        &::before {
+          border-color: $c-purple;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color: $c-purple;
+      }
+
+      &:focus {
+        color: $c-purple;
+        border-color: $c-purple;
+      }
+
+      &:active {
+        color: $c-purple;
+        background-color: $c-light;
+        border-color: $c-light;
+      }
+    }
+  }
+
+  body[data-color-theme="dark-purple"] {
+    .social-block__toggler {
+      color: $c-purple;
+
+      &:hover {
+        color: $c-dark;
+      }
+
+      &:focus {
+        color: $c-dark;
+
+        &::before {
+          border-color: currentColor;
+        }
+      }
+
+      &:active {
+        color: $c-light;
+        background-color: $c-dark;
+
+        &::before {
+          border-color: $c-dark;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color: $c-dark;
+      }
+
+      &:focus {
+        color: $c-dark;
+        border-color: $c-dark;
+      }
+
+      &:active {
+        color: $c-dark;
+        background-color: $c-light;
+        border-color: $c-light;
+      }
+    }
+  }
+
+  body[data-color-theme="bright-blue"] {
+    .social-block__toggler {
+      color: $c-soft-blue;
+
+      &:hover {
+        color: $c-bright-blue;
+      }
+
+      &:focus {
+        color: $c-bright-blue;
+
+        &::before {
+          border-color: currentColor;
+        }
+      }
+
+      &:active {
+        color: $c-light;
+        background-color: $c-bright-blue;
+
+        &::before {
+          border-color: $c-bright-blue;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color: $c-bright-blue;
+      }
+
+      &:focus {
+        color: $c-bright-blue;
+        border-color: $c-bright-blue;
+      }
+
+      &:active {
+        color: $c-bright-blue;
+        background-color: $c-light;
+        border-color: $c-light;
+      }
+    }
+  }
+
+  body[data-color-theme="soft-blue"] {
+    .social-block__toggler {
+      color: $c-bright-blue;
+
+      &:hover {
+        color: $c-soft-blue;
+      }
+
+      &:focus {
+        color: $c-soft-blue;
+
+        &::before {
+          border-color: currentColor;
+        }
+      }
+
+      &:active {
+        color: $c-light;
+        background-color: $c-soft-blue;
+
+        &::before {
+          border-color: $c-soft-blue;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color: $c-soft-blue;
+      }
+
+      &:focus {
+        color: $c-soft-blue;
+        border-color: $c-soft-blue;
+      }
+
+      &:active {
+        color: $c-soft-blue;
+        background-color: $c-light;
+        border-color: $c-light;
       }
     }
   }

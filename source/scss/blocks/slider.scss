@@ -252,6 +252,16 @@
     opacity: 0.5;
     pointer-events: none;
   }
+
+  &--prev {
+    animation-name: rolling-left-to-right;
+    animation-duration: 0.5s;
+  }
+
+  &--next {
+    animation-name: rolling-right-to-left;
+    animation-duration: 0.5s;
+  }
 }
 
 .slider__pagination.swiper-pagination {
@@ -307,5 +317,27 @@
       height: 0.4rem;
       background-color: $c-light;
     }
+  }
+}
+
+@keyframes rolling-left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-6rem) rotate(180deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes rolling-right-to-left {
+  from {
+    opacity: 0;
+    transform: translateX(6rem) rotate(-180deg);
+  }
+
+  to {
+    transform: rotate(0);
   }
 }
