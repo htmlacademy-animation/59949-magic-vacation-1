@@ -19,14 +19,104 @@
         <path d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
     <g id="clouds-left">
-        <line x1="68.95" y1="107.8" x2="131.86" y2="107.8" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-        <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <line x1="68.95" y1="107.8" x2="131.86" y2="107.8" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+            <animate
+                begin="0s"
+                attributeName="stroke-opacity"
+                dur="2s"
+                values="0; 1; 1; 0"
+                keyTimes="0; 0.1; 0.8; 1"
+                fill="freeze"
+            />
+            <animateTransform
+                begin="0s"
+                attributeName="transform"
+                type="translate"
+                from="170"
+                to="0"
+                dur="2s"
+                fill="freeze"
+            />
+        </line>
+        <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+            <animate
+                begin="0s"
+                attributeName="stroke-opacity"
+                dur="2s"
+                values="0; 1; 1; 0"
+                keyTimes="0; 0.1; 0.8; 1"
+                fill="freeze"
+            />
+            <animateTransform
+                begin="0s"
+                attributeName="transform"
+                type="translate"
+                from="170"
+                to="-5"
+                dur="2s"
+                fill="freeze"
+            />
+        </path>
     </g>
     <g id="clouds-right">
-        <line x1="258.96" y1="93.19" x2="298.74" y2="93.19" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <line x1="258.96" y1="93.19" x2="298.74" y2="93.19" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-opacity="0">
+            <animate
+                begin="1.6s"
+                attributeName="stroke-opacity"
+                dur="2s"
+                values="0; 1; 1; 0"
+                keyTimes="0; 0.1; 0.85; 1"
+                fill="freeze"
+            />
+            <animateTransform
+                begin="1.6s"
+                attributeName="transform"
+                type="translate"
+                from="0"
+                to="-160"
+                dur="3s"
+                fill="freeze"
+            />
+        </line>
         <g>
-            <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-            <line x1="287.01" y1="82.91" x2="309.21" y2="82.91" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+            <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-opacity="0">
+                <animate
+                    begin="1.6s"
+                    attributeName="stroke-opacity"
+                    dur="2s"
+                    values="0; 1; 1; 0"
+                    keyTimes="0; 0.1; 0.85; 1"
+                    fill="freeze"
+                />
+                <animateTransform
+                    begin="1.6s"
+                    attributeName="transform"
+                    type="translate"
+                    from="0"
+                    to="-170"
+                    dur="2s"
+                    fill="freeze"
+                />
+            </path>
+            <line x1="287.01" y1="82.91" x2="309.21" y2="82.91" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-opacity="0">
+                <animate
+                    begin="1.6s"
+                    attributeName="stroke-opacity"
+                    dur="2s"
+                    values="0; 1; 1; 0"
+                    keyTimes="0; 0.1; 0.85; 1"
+                    fill="freeze"
+                />
+                <animateTransform
+                    begin="1.6s"
+                    attributeName="transform"
+                    type="translate"
+                    from="0"
+                    to="-170"
+                    dur="2s"
+                    fill="freeze"
+                />
+            </line>
         </g>
     </g>
     <g id="dirigible-trace">
