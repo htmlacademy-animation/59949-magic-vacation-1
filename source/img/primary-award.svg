@@ -212,7 +212,15 @@
         </line>
     </g>
     <g id="mountains">
-        <path d="M289.94,327.88H244.88L212.8,296.58a1.89,1.89,0,0,0-2.44,0l-10.2,10.23a1.72,1.72,0,0,1-2.25,0l-19-20.17a2.4,2.4,0,0,0-3.1,0l-26.42,25.64a1.71,1.71,0,0,1-2.25,0l-2.63-2.92a1.71,1.71,0,0,0-2.31,0L124.63,329H80.78" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-        <path d="M289.94,328H200.15c-0.86,0-1.56,0-2.25,0h-19c-1.5,0-2.23,0-3.1,0h-32.3c-1.09,0-1.66,0-2.31,0H80.78" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path d="M289.94,327.88H244.88L212.8,296.58a1.89,1.89,0,0,0-2.44,0l-10.2,10.23a1.72,1.72,0,0,1-2.25,0l-19-20.17a2.4,2.4,0,0,0-3.1,0l-26.42,25.64a1.71,1.71,0,0,1-2.25,0l-2.63-2.92a1.71,1.71,0,0,0-2.31,0L124.63,329H80.78" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+            <animate
+                id="mountains"
+                begin="3s"
+                dur="0.5s"
+                attributeName="d"
+                to="M289.17 328h-45.06 l-32.08 0 a1.89 1.89 0 00 0 0 l-10.2 0 a1.72 1.72 0 01 0 0 l-19 0 a2.4 2.4 0 00 0 0 l-26.42 0 a1.71 1.71 0 01 0 0 l-2.63 0 a1.71 1.71 0 00 0 0 l-17.57 0 H81"
+                fill="freeze"
+            />
+        </path>
     </g>
 </svg>
