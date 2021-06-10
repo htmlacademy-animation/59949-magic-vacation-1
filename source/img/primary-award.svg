@@ -1,4 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 330">
+    <defs>
+        <path id="keel-top" fill="#068e4d" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2a9,9,0,0,1,9-9">
+            <animateTransform
+                begin="0"
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0, -2; 0 0; 0, 2; 0 0"
+                dur="2s"
+                repeatCount="indefinite"
+                additive="sum"
+            />
+        </path>
+        <path id="keel-bottom" fill="#068e4d" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2a9,9,0,0,0,9,9">
+            <animateTransform
+                begin="0"
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0, -2; 0 0; 0, 2; 0 0"
+                dur="2s"
+                repeatCount="indefinite"
+                additive="sum"
+            />
+        </path>
+    </defs>
+
     <g id="dirigible">
         <g id="gondola">
             <path d="M175.44,249.28h48.36a13.27,13.27,0,0,0,13-10.65l3.74-18.32H172.36v25.89A3.09,3.09,0,0,0,175.44,249.28Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -26,6 +51,9 @@
             />
         </g>
         <g id="balloon">
+            <use xlink:href="#keel-top" />
+            <use xlink:href="#keel-bottom" />
+
             <path d="M205,227.08c43.38,0,74.86-15.55,74.86-37s-31.48-37-74.86-37c-27.94,0-55.36,13.53-73.46,24.87a14.3,14.3,0,0,0,0,24.21c18.09,11.33,45.52,24.87,73.46,24.87" fill="#068e4d"/>
             <path d="M205,227.08c43.38,0,74.86-15.55,74.86-37s-31.48-37-74.86-37c-27.94,0-55.36,13.53-73.46,24.87a14.3,14.3,0,0,0,0,24.21C149.63,213.54,177.06,227.08,205,227.08Z" fill="none" stroke="#fff" stroke-width="2"/>
 
@@ -49,16 +77,8 @@
                 />
             </path>
 
-        </g>
-        <g id="tail">
-            <path d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2a9,9,0,0,1,9-9" fill="#068e4d"/>
-            <path d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2A9,9,0,0,1,123.23,173.34Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-            <path d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2a9,9,0,0,0,9,9" fill="#068e4d"/>
-            <path d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-            <path d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2a9,9,0,0,1,9-9" fill="#068e4d"/>
-            <path d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2A9,9,0,0,1,123.23,173.34Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-            <path d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2a9,9,0,0,0,9,9" fill="#068e4d"/>
-            <path d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <use xlink:href="#keel-top" transform="scale(1, -1) translate(0,-380)" />
+            <use xlink:href="#keel-bottom" transform="scale(1, -1) translate(0,-380)" />
         </g>
     </g>
     <g id="clouds-left">
