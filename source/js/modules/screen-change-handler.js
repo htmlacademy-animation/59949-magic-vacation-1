@@ -14,6 +14,12 @@ export default () => {
         break;
       case `prizes`:
         textTransform(evt.detail.screenElement, `.prizes__title`);
+
+        if (!evt.detail.screenElement.classList.contains(`is-visited`)) {
+          setTimeout(() => {
+            evt.detail.screenElement.classList.add(`is-visited`);
+          }, 100);
+        }
         break;
       case `rules`:
         textTransform(evt.detail.screenElement, `.rules__title`);
