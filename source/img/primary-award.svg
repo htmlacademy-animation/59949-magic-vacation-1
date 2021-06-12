@@ -356,11 +356,29 @@
             <animateTransform
                 attributeName="transform"
                 type="translate"
-                begin="3.4s"
+                begin="3.3s"
                 from="-300"
                 to="0"
-                dur="0.3s"
+                dur="0.47s"
                 fill="freeze"
+            />
+            <animateTransform
+                attributeName="transform"
+                additive="sum"
+                type="rotate"
+                begin="3.3s"
+                values="-6.4, 150, 330; 0, 150, 330; 6, 150, 330; -2, 150, 330; 1.5, 150, 330; 0, 150, 330"
+                keyTimes="0; 0.16; 0.31; 0.52; 0.76; 1"
+                calcMode="paced"
+                dur="1.53s"
+            />
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                begin="4.84s"
+                values="0, 150, 330; -1, 150, 330; 0, 150, 330; 1, 150, 330; 0, 150, 330"
+                dur="1.5s"
+                repeatCount="indefinite"
             />
         </g>
 
