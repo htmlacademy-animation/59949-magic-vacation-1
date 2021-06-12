@@ -250,6 +250,15 @@
             <clipPath id="window-mask">
                 <path d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z"/>
             </clipPath>
+            <animate
+                xlink:href="#second-scene"
+                attributeName="opacity"
+                begin="4"
+                dur="0.1s"
+                from="1"
+                to="1"
+                fill="freeze"
+            />
         </defs>
 
         <g id="ski" transform="translate(-300)">
