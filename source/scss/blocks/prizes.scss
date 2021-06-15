@@ -146,7 +146,7 @@
 
       @media (min-width: $stop-scaling) {
         left: -59px;
-        bottom: -14px;
+        bottom: 0;
         width: 268px;
       }
 
@@ -185,12 +185,17 @@
         @media (orientation: portrait) {
           display: none;
         }
+
+        @media (min-width: $stop-scaling) {
+          width: 400px;
+        }
       }
     }
   }
 
   &--cases {
     margin-left: 7rem;
+    position: relative;
 
     @media (orientation: landscape) {
       opacity: 0;
@@ -202,7 +207,7 @@
     }
 
     @media (min-width: $stop-scaling) {
-      margin-left: 70px;
+      margin-left: 110px;
     }
 
     @media (max-width: $tablet) and (orientation: portrait) {
@@ -214,7 +219,11 @@
       width: 18.8rem;
 
       @media (min-width: $stop-scaling) {
-        width: 188px;
+        width: 260px;
+      }
+
+      @media (min-width: $tablet) and (orientation: portrait) {
+        width: 24rem;
       }
 
       @media (max-width: $tablet) and (orientation: portrait) {
@@ -250,7 +259,7 @@
       width: 26rem;
 
       @media (min-width: $stop-scaling) {
-        width: 260px;
+        width: 360px;
       }
 
       @media (max-width: $tablet) and (orientation: portrait) {
