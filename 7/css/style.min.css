@@ -2516,7 +2516,7 @@ img {
 @media (min-width: 2000px) {
   .prizes__item--journeys .prizes__icon {
     left: -59px;
-    bottom: -14px;
+    bottom: 0;
     width: 268px;
   }
 }
@@ -2561,8 +2561,14 @@ img {
     display: none;
   }
 }
+@media (min-width: 2000px) {
+  .prizes__item--journeys .prizes__icon object {
+    width: 400px;
+  }
+}
 .prizes__item--cases {
   margin-left: 7rem;
+  position: relative;
 }
 @media (orientation: landscape) {
   .prizes__item--cases {
@@ -2575,7 +2581,7 @@ img {
 }
 @media (min-width: 2000px) {
   .prizes__item--cases {
-    margin-left: 70px;
+    margin-left: 110px;
   }
 }
 @media (max-width: 1024px) and (orientation: portrait) {
@@ -2589,7 +2595,12 @@ img {
 }
 @media (min-width: 2000px) {
   .prizes__item--cases .prizes__icon {
-    width: 188px;
+    width: 260px;
+  }
+}
+@media (min-width: 1024px) and (orientation: portrait) {
+  .prizes__item--cases .prizes__icon {
+    width: 24rem;
   }
 }
 @media (max-width: 1024px) and (orientation: portrait) {
@@ -2627,7 +2638,7 @@ img {
 }
 @media (min-width: 2000px) {
   .prizes__item--codes .prizes__icon {
-    width: 260px;
+    width: 360px;
   }
 }
 @media (max-width: 1024px) and (orientation: portrait) {
