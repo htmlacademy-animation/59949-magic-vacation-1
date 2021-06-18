@@ -138,6 +138,10 @@
       }
     }
 
+    @media (min-width: $stop-scaling) {
+      transform: translateX(330px);
+    }
+
     .prizes__icon {
       position: relative;
       left: -5.9rem;
