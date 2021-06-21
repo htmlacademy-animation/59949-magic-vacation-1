@@ -3,6 +3,11 @@
         <clipPath id="ground-mask">
             <rect x="40" y="320" width="255" height="10" />
         </clipPath>
+        <path
+            id="case-movement-path"
+            d="M179,111c24.19-9.24,29.8-15.84,29.42-20.44C207.18,75.43,138.73,51.78,96,84c-2.93,2.21-31.66,24.52-29,54,3.54,39.18,59.83,61.15,75.7,67.35,53.65,20.94,94.43,8.79,101.78,27.18,2.89,7.25.78,19.69-21.48,42.47"
+            fill="none" stroke="#000" stroke-miterlimit="10"
+        />
     </defs>
 
     <g id="leaf-1" opacity="0">
@@ -106,7 +111,43 @@
             fill="freeze"
         />
     </g>
-    <g id="case">
+    <g id="case" transform="translate(-60 -20) scale(0.2)" opacity="0" >
+        <animateMotion
+            href="#case"
+            begin="0.5s"
+            dur="1.367s"
+            calcMode="linear"
+            fill="freeze"
+        >
+            <mpath xlink:href="#case-movement-path"/>
+        </animateMotion>
+        <animate
+            attributeName="opacity"
+            begin="0.5s"
+            dur="0.25s"
+            from="0"
+            to="1"
+            fill="freeze"
+        />
+<!--        <animateTransform-->
+<!--            attributeName="transform"-->
+<!--            type="scale"-->
+<!--            begin="0.5s"-->
+<!--            dur="1.367s"-->
+<!--            from="0.2"-->
+<!--            to="1"-->
+<!--            fill="freeze"-->
+<!--        />-->
+        <animateTransform
+            attributeName="transform"
+            type="rotate"
+            begin="0.5"
+            dur="1.367s"
+            values="30, 215, 218; -30, 215, 218; 20, 215, 218; 18.3, 215, 218; -6.5, 215, 218; 0, 215, 218;"
+            keyTimes="0; 0.293; 0.561; 0.683; 0.927; 1"
+            calcMode="paced"
+            additive="sum"
+        />
         <g>
             <path d="M251.89,328.88a3.54,3.54,0,0,0,3.53-3.53v-5.07a3.53,3.53,0,1,0-7.06,0v5.07a3.55,3.55,0,0,0,3.53,3.53" fill="#a67ee5"/>
             <path d="M251.89,328.88a3.54,3.54,0,0,0,3.53-3.53v-5.07a3.53,3.53,0,1,0-7.06,0v5.07A3.55,3.55,0,0,0,251.89,328.88Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
@@ -185,4 +226,8 @@
             />
         </path>
     </g>
+
+    <path
+            d="M179,111c24.19-9.24,29.8-15.84,29.42-20.44C207.18,75.43,138.73,51.78,96,84c-2.93,2.21-31.66,24.52-29,54,3.54,39.18,59.83,61.15,75.7,67.35,53.65,20.94,94.43,8.79,101.78,27.18,2.89,7.25.78,19.69-21.48,42.47"
+            fill="none" stroke="#000" stroke-miterlimit="10"/>
 </svg>
