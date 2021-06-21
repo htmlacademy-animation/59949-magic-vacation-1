@@ -40,12 +40,30 @@
             fill="freeze"
         />
         <animateTransform
+            id="cloudsTransform"
             attributeName="transform"
             type="translate"
             begin="0"
             dur="0.15s"
             from="85 0"
             to="0 0"
+            fill="freeze"
+        />
+        <animate
+            attributeName="opacity"
+            begin="cloudsTransform.end + 1.5s"
+            dur="0.25s"
+            from="1"
+            to="0"
+            fill="freeze"
+        />
+        <animateTransform
+            attributeName="transform"
+            type="translate"
+            begin="cloudsTransform.end + 1.5s"
+            dur="0.4s"
+            from="0 0"
+            to="0 -100"
             fill="freeze"
         />
     </g>
@@ -68,6 +86,23 @@
             dur="0.18s"
             from="85 0"
             to="0 0"
+            fill="freeze"
+        />
+        <animate
+            attributeName="opacity"
+            begin="cloudsTransform.end + 1.4s"
+            dur="0.25s"
+            from="1"
+            to="0"
+            fill="freeze"
+        />
+        <animateTransform
+            attributeName="transform"
+            type="translate"
+            begin="cloudsTransform.end + 1.4s"
+            dur="0.4s"
+            from="0 0"
+            to="0 -100"
             fill="freeze"
         />
     </g>
