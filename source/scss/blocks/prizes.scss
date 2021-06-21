@@ -130,7 +130,7 @@
     @media (orientation: landscape) {
       opacity: 0;
       transform: translateX(33rem);
-      transition: opacity 0.5s ease-in 0s, transform 0.7s ease-out 3.95s;
+      //transition: opacity 0.5s ease-in 0s, transform 0.7s ease-out 3.95s;
 
       .screen--prizes.is-visited & {
         opacity: 1;
@@ -198,12 +198,12 @@
   }
 
   &--cases {
-    margin-left: 7rem;
     position: relative;
+    margin-left: 5rem;
 
     @media (orientation: landscape) {
-      opacity: 0;
-      transition: opacity 0.2s ease-in 4.15s;
+      //opacity: 0;
+      //transition: opacity 0.2s ease-in 4.15s;
 
       .screen--prizes.is-visited & {
         opacity: 1;
@@ -220,8 +220,6 @@
     }
 
     .prizes__icon {
-      width: 18.8rem;
-
       @media (min-width: $stop-scaling) {
         width: 260px;
       }
@@ -241,6 +239,13 @@
 
       @media (max-width: $mobile) and (orientation: landscape) {
         width: 7rem;
+      }
+
+      object {
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+        width: 35rem;
       }
     }
   }
