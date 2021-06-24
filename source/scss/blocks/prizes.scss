@@ -130,7 +130,7 @@
     @media (orientation: landscape) {
       opacity: 0;
       transform: translateX(33rem);
-      //transition: opacity 0.5s ease-in 0s, transform 0.7s ease-out 3.95s;
+      transition: opacity 0.5s ease-in 0s, transform 0.7s ease-out 3.95s;
 
       .screen--prizes.is-visited & {
         opacity: 1;
@@ -202,8 +202,8 @@
     margin-left: 5rem;
 
     @media (orientation: landscape) {
-      //opacity: 0;
-      //transition: opacity 0.2s ease-in 4.15s;
+      opacity: 0;
+      transition: opacity 0.2s ease-in 4.15s;
 
       .screen--prizes.is-visited & {
         opacity: 1;

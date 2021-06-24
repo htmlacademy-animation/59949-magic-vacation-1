@@ -3,14 +3,26 @@
         <clipPath id="groundMask">
             <rect x="40" y="320" width="255" height="10" />
         </clipPath>
+        <circle id="helpPoint" cx="600" cy="600" r="1"/>
     </defs>
+
+    <animate
+        xlink:href="#helpPoint"
+        id="animationDelay"
+        attributeName="opacity"
+        begin="4.25s"
+        dur="0.1s"
+        from="1"
+        to="0"
+        fill="freeze"
+    />
 
     <g id="leaf1" opacity="0">
         <path d="M263.47,206.82a2,2,0,0,1,3.15,2c-1,7-2.07,20.33,4.85,19.4,4.94-.66-16.65-31.53,19.32-38.16a2,2,0,0,1,2.18,2.89c-1.32,2.74-2.83,6.61-2.73,9.9a2,2,0,0,0,3.71,1c4.1-6.15,15.1-17.86,36.59-10.7a2,2,0,0,1,1.35,1.54c0.93,4.8,4.13,23.24-.29,28.72-5.09,6.31-15,4.14-16.18,10.25-1.3,6.91,7.51,4.82,13.42-.22a2,2,0,0,1,3.32,1.64c-0.25,5.45-2.18,14-11.12,18.69-13.78,7.21-23.48-7-25.19-3.88-2.59,4.66,7.94,8.47,13.78,10.18a2,2,0,0,1,.61,3.59c-10.52,7.74-29.13,10.28-37-5.41-8.3-16.59-12.93-12.49-18.19-20.38-5.71-8.57-4.33-22.54,8.38-31.05m29.4,32.47c0.5,2.73,5.2,3.51,8.35,2.94s8.47-3.83,8-6.56-6.62-3.9-9.78-3.33-7.05,4.22-6.55,6.95" fill="#e81a5a">
             <animateTransform
                 attributeName="transform"
                 type="rotate"
-                begin="0"
+                begin="animationDelay.end"
                 dur="1.8s"
                 values="0, 267, 250; -4, 267, 250; 0, 267, 250; 4, 267, 250; 0, 267, 250"
                 calcMode="linear"
@@ -20,7 +32,7 @@
         <path d="M263,327.88s-4.91-70.27,5.54-80.72" fill="none" stroke="#e81a5a" stroke-miterlimit="10" stroke-width="2"/>
         <animate
             attributeName="opacity"
-            begin="0"
+            begin="animationDelay.end"
             dur="0.35s"
             from="0"
             to="1"
@@ -33,7 +45,7 @@
         <line x1="93.48" y1="67.45" x2="115.68" y2="67.45" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
         <animate
             attributeName="opacity"
-            begin="0"
+            begin="animationDelay.end"
             dur="0.2s"
             from="0"
             to="1"
@@ -43,7 +55,7 @@
             id="cloudsTransform"
             attributeName="transform"
             type="translate"
-            begin="0"
+            begin="animationDelay.end"
             dur="0.15s"
             from="85 0"
             to="0 0"
@@ -73,7 +85,7 @@
         <path d="M235.77,119H216.32a35.49,35.49,0,0,0-68-13.69A26.34,26.34,0,0,0,135.43,102a26.72,26.72,0,0,0-24.8,17H95.48a10.49,10.49,0,0,0,0,21h140.3a10.49,10.49,0,0,0,0-21" fill="#fff"/>
         <animate
             attributeName="opacity"
-            begin="0"
+            begin="animationDelay.end"
             dur="0.25s"
             from="0"
             to="1"
@@ -82,7 +94,7 @@
         <animateTransform
             attributeName="transform"
             type="translate"
-            begin="0.03s"
+            begin="animationDelay.end + 0.03s"
             dur="0.18s"
             from="85 0"
             to="0 0"
@@ -109,14 +121,14 @@
     <g id="case" opacity="0">
         <animate
             attributeName="opacity"
-            begin="0.5s"
+            begin="animationDelay.end + 0.5s"
             dur="0.25s"
             from="0"
             to="1"
             fill="freeze"
         />
         <animateTransform
-            begin="0.5s"
+            begin="animationDelay.end + 0.5s"
             attributeName="transform"
             type="translate"
             values="205 100; 200 55; 140 25; 100 5; 15 -10; -43 0; -43 10; 5 -5; 43 -10; 0 0"
@@ -127,7 +139,7 @@
         <animateTransform
             attributeName="transform"
             type="scale"
-            begin="0.5s"
+            begin="animationDelay.end + 0.5s"
             dur="2s"
             values="0; 0.1; 0.16; 0.23; 0.35; 0.5; 0.6; 0.8; 0.9; 1"
             calcMode="linear"
@@ -137,7 +149,7 @@
         <animateTransform
             attributeName="transform"
             type="rotate"
-            begin="0.5"
+            begin="animationDelay.end + 0.5"
             dur="2s"
             values="40, 215, 218; -30, 215, 218; 20, 215, 218; 18.3, 215, 218; -6.5, 215, 218; 0, 215, 218;"
             keyTimes="0; 0.3; 0.56; 0.68; 0.93; 1"
@@ -177,7 +189,7 @@
         <path d="M245.13,327.88s3.48-30.11,21.7-30.11" fill="none" stroke="#fe6183" stroke-miterlimit="10" stroke-width="2"/>
         <animate
             attributeName="opacity"
-            begin="0"
+            begin="animationDelay.end"
             dur="0.35s"
             from="0"
             to="1"
@@ -186,7 +198,7 @@
         <animateTransform
             attributeName="transform"
             type="rotate"
-            begin="0"
+            begin="animationDelay.end"
             dur="2s"
             values="0, 245, 328; 3, 245, 328; 0, 245, 328; -5, 245, 328; 0, 245, 328;  1, 245, 328;  0, 245, 328;  -1, 245, 328;  0, 245, 328"
             calcMode="paced"
@@ -197,7 +209,7 @@
         <path transform="translate(-250 0)" d="M41 329H284" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-opacity="0">
             <animate
                 attributeName="stroke-opacity"
-                begin="0"
+                begin="animationDelay.end"
                 dur="0.4s"
                 to="1"
                 fill="freeze"
@@ -206,7 +218,7 @@
                 id="groundTransform"
                 attributeName="transform"
                 type="translate"
-                begin="0"
+                begin="animationDelay.end"
                 dur="0.15s"
                 from="-250 0"
                 to="0 0"
