@@ -3,11 +3,6 @@
         <clipPath id="ground-mask">
             <rect x="40" y="320" width="255" height="10" />
         </clipPath>
-        <path
-            id="case-movement-path"
-            d="M179,111c24.19-9.24,29.8-15.84,29.42-20.44C207.18,75.43,138.73,51.78,96,84c-2.93,2.21-31.66,24.52-29,54,3.54,39.18,59.83,61.15,75.7,67.35,53.65,20.94,94.43,8.79,101.78,27.18,2.89,7.25.78,19.69-21.48,42.47"
-            fill="none" stroke="#000" stroke-miterlimit="10"
-        />
     </defs>
 
     <g id="leaf-1" opacity="0">
@@ -111,16 +106,7 @@
             fill="freeze"
         />
     </g>
-    <g id="case" transform="translate(-60 -20) scale(0.2)" opacity="0" >
-<!--        <animateMotion-->
-<!--            href="#case"-->
-<!--            begin="0.5s"-->
-<!--            dur="1.367s"-->
-<!--            calcMode="linear"-->
-<!--            fill="freeze"-->
-<!--        >-->
-<!--            <mpath xlink:href="#case-movement-path"/>-->
-<!--        </animateMotion>-->
+    <g id="case" opacity="0">
         <animate
             attributeName="opacity"
             begin="0.5s"
@@ -133,17 +119,17 @@
             begin="0.5s"
             attributeName="transform"
             type="translate"
-            values="178 108; 185 67; 172 47; 100 5; 15 -10; -43 0; -43 10; 5 -5; 43 -10; 0 0"
+            values="205 100; 200 55; 140 25; 100 5; 15 -10; -43 0; -43 10; 5 -5; 43 -10; 0 0"
             calcMode="linear"
-            dur="1.367s"
+            dur="2s"
             fill="freeze"
         />
         <animateTransform
             attributeName="transform"
             type="scale"
             begin="0.5s"
-            dur="1.367s"
-            values="0.01; 0.1; 0.16; 0.23; 0.35; 0.5; 0.6; 0.8; 0.9; 1"
+            dur="2s"
+            values="0; 0.1; 0.16; 0.23; 0.35; 0.5; 0.6; 0.8; 0.9; 1"
             calcMode="linear"
             additive="sum"
             fill="freeze"
@@ -152,10 +138,10 @@
             attributeName="transform"
             type="rotate"
             begin="0.5"
-            dur="1.367s"
-            values="30, 215, 218; -30, 215, 218; 20, 215, 218; 18.3, 215, 218; -6.5, 215, 218; 0, 215, 218;"
-            keyTimes="0; 0.293; 0.561; 0.683; 0.927; 1"
-            calcMode="paced"
+            dur="2s"
+            values="40, 215, 218; -30, 215, 218; 20, 215, 218; 18.3, 215, 218; -6.5, 215, 218; 0, 215, 218;"
+            keyTimes="0; 0.3; 0.56; 0.68; 0.93; 1"
+            calcMode="linear"
             additive="sum"
         />
         <g>
@@ -236,8 +222,4 @@
             />
         </path>
     </g>
-
-    <path
-            d="M179,111c24.19-9.24,29.8-15.84,29.42-20.44C207.18,75.43,138.73,51.78,96,84c-2.93,2.21-31.66,24.52-29,54,3.54,39.18,59.83,61.15,75.7,67.35,53.65,20.94,94.43,8.79,101.78,27.18,2.89,7.25.78,19.69-21.48,42.47"
-            fill="none" stroke="#000" stroke-miterlimit="10"/>
 </svg>
