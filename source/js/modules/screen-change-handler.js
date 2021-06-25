@@ -1,3 +1,4 @@
+import {initSVGAnimation} from './prizes-svg';
 import textTransform from './text-transform';
 import slider from './slider';
 
@@ -16,6 +17,8 @@ export default () => {
         textTransform(evt.detail.screenElement, `.prizes__title`);
 
         if (!evt.detail.screenElement.classList.contains(`is-visited`)) {
+          initSVGAnimation();
+
           setTimeout(() => {
             evt.detail.screenElement.classList.add(`is-visited`);
           }, 100);
