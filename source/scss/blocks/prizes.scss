@@ -281,8 +281,8 @@
 
   &--codes {
     @media (orientation: landscape) {
-      opacity: 0;
-      transition: opacity 0.2s ease-in 5.5s;
+      //opacity: 0;
+      //transition: opacity 0.2s ease-in 5.5s;
 
       .screen--prizes.is-visited & {
         opacity: 1;
@@ -294,6 +294,7 @@
     }
 
     .prizes__icon {
+      position: relative;
       width: 26rem;
 
       @media (min-width: $stop-scaling) {
@@ -310,6 +311,19 @@
 
       @media (max-width: $mobile) and (orientation: landscape) {
         width: 10rem;
+      }
+
+      img {
+        @media (orientation: landscape) {
+          display: none;
+        }
+      }
+
+      object {
+        position: absolute;
+        left: -4.5rem;
+        bottom: 0;
+        width: 35rem;
       }
     }
   }
