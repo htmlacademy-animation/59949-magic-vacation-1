@@ -69,6 +69,38 @@
                 fill="freeze"
             />
         </g>
+        <g id="flowers" opacity="0">
+            <path d="M180.73,277.8s8.3-74.59,39.71-90" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <path d="M217.95,187.12l9.27-24.49a22,22,0,0,1,8.72,3,7.87,7.87,0,0,1,9.72,12.33,22.14,22.14,0,0,1,.86,9.18l-26,3.3a2.45,2.45,0,0,1-2.6-3.29" fill="#3b7bf2">
+                <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    begin="caseOpen.end"
+                    dur="0.3s"
+                    values="40, 218, 187; 0, 218, 187;"
+                    calcMode="linear"
+                    fill="freeze"
+                />
+            </path>
+            <path d="M178.24,287.63s6.89-44.68,37.95-56.53" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <path d="M210.85,232l9-16.47a16.66,16.66,0,0,1,6.13,2.93,5.93,5.93,0,0,1,4-.42,5.67,5.67,0,0,1,4.26,6.85,5.54,5.54,0,0,1-2.29,3.23,15.1,15.1,0,0,1-.21,6.58l-19.34-.11a1.76,1.76,0,0,1-1.6-2.58" fill="#3b7bf2"/>
+            <animate
+                attributeName="opacity"
+                begin="caseOpen.end"
+                dur="0.01s"
+                from="0"
+                to="1"
+                fill="freeze"
+            />
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                begin="caseOpen.end"
+                dur="1.2s"
+                values="64, 178, 289; -10, 178, 289; 7, 178, 289; -3, 178, 289; 2, 178, 289; 0, 178, 289;"
+                calcMode="linear"
+            />
+        </g>
         <g id="leaves" opacity="0">
             <g id="bigLeaf">
                 <path d="M141.77,204.16c24.1,32.45,35.81,84,35.81,84" fill="none" stroke="#3b7bf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
