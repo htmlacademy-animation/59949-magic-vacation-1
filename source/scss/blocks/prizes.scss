@@ -324,6 +324,24 @@
         left: -4.5rem;
         bottom: 0;
         width: 35rem;
+
+        @media (max-width: $tablet) and (orientation: landscape) {
+          left: -25px;
+          width: 13.5rem;
+        }
+
+        @media (max-width: $mobile) and (orientation: landscape) {
+          left: -20px;
+        }
+
+        @media (orientation: portrait) {
+          display: none;
+        }
+
+        @media (min-width: $stop-scaling) {
+          left: -63px;
+          width: 485px;
+        }
       }
     }
   }
