@@ -282,7 +282,7 @@
   &--codes {
     @media (orientation: landscape) {
       opacity: 0;
-      transition: opacity 0.2s ease-in 7.3s;
+      transition: opacity 0.2s ease-in 7s;
 
       .screen--prizes.is-visited & {
         opacity: 1;
