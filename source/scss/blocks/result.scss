@@ -1,3 +1,5 @@
+$fail-logo-symbols-count: 9;
+
 .result {
   flex-grow: 1;
   display: flex;
@@ -221,6 +223,27 @@
 
     .screen--show & {
       stroke-dashoffset: 0;
+    }
+  }
+
+  &--fail {
+    overflow: visible;
+
+    path {
+      transform: translateY(-100px);
+      animation-name: drop;
+      animation-duration: 0.8s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+    }
+
+    @for $i from 1 through $fail-logo-symbols-count {
+      path {
+        &:nth-child(#{$i}n) {
+          animation-delay: #{$i * 0.05}s;
+          transition: stroke-dashoffset 0.35s ease-in #{$i * 0.05}s;
+        }
+      }
     }
   }
 }
@@ -599,5 +622,27 @@
 
   85% {
     transform: translate(0.1rem, -0.5rem) rotate(3deg);
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  55% {
+    transform: translateY(-65px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+
+  85% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
