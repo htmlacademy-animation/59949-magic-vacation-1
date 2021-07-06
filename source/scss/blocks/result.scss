@@ -215,6 +215,16 @@
   }
 }
 
+.result__svg-result-logo {
+  path {
+    transition: stroke-dashoffset 0.35s ease-in 0s;
+
+    .screen--show & {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
 .result__title {
   margin: 0 auto 2rem;
   color: $c-light;
