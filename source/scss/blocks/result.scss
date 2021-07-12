@@ -226,17 +226,25 @@ $fail-logo-symbols-count: 9;
 }
 
 .result__svg-result-logo {
+  overflow: visible;
+
   path {
-    transition: stroke-dashoffset 0.35s ease-in 0s;
+    transform-origin: center center;
+    transition: stroke-dashoffset 0.35s ease-in 0s, transform 0.3s linear 0s;
 
     .screen--show & {
       stroke-dashoffset: 0;
+      transform: scale(1);
+    }
+  }
+
+  &--win {
+    path {
+      transform: scale(1.2);
     }
   }
 
   &--fail {
-    overflow: visible;
-
     path {
       transform: translateY(-100px);
       animation-name: drop;
