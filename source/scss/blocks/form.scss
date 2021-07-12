@@ -112,6 +112,7 @@
 
 .form__button {
   color: transparent;
+  z-index: 1;
 
   .screen--game & {
     transition: color 0.3s ease-in 0s;
