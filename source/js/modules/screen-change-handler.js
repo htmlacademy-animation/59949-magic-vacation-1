@@ -1,9 +1,16 @@
 import {initSVGAnimation} from './prizes-svg';
 import textTransform from './text-transform';
 import slider from './slider';
+import Timer from './game-timer';
+
+const timer = new Timer();
 
 export default () => {
   document.body.addEventListener(`screenChanged`, (evt) => {
+    if (timer.requestId) {
+      timer.destroy();
+    }
+
     switch (evt.detail.screenName) {
       case `top`:
         textTransform(evt.detail.screenElement, `.intro__title`);
@@ -28,6 +35,7 @@ export default () => {
         textTransform(evt.detail.screenElement, `.rules__title`);
         break;
       case `game`:
+        timer.init();
         textTransform(evt.detail.screenElement, `.game__title`);
         break;
       default:
