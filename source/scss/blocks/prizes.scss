@@ -165,7 +165,7 @@
       }
 
       @media (max-width: $tablet) and (orientation: landscape) {
-        left: -2rem;
+        left: -3rem;
         width: 13rem;
       }
 
@@ -196,6 +196,68 @@
 
         @media (min-width: $stop-scaling) {
           width: 400px;
+        }
+      }
+    }
+
+    .prizes__desc {
+      .prizes__count {
+        opacity: 0;
+        transition: opacity 0.1s ease-in 3.05s;
+
+        .screen--prizes.is-visited & {
+          opacity: 1;
+        }
+      }
+
+      span {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: opacity 0.3s ease-in 3.05s, transform 0.3s ease-in 3.05s;
+
+        .screen--prizes.is-visited & {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (orientation: portrait) {
+        .prizes__count,
+        span {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (orientation: landscape) {
+        margin-top: 8.3rem;
+
+        span {
+          margin-left: 8rem;
+        }
+      }
+
+      @media (max-width: $tablet) and (orientation: landscape) {
+        margin-top: 3rem;
+
+        span {
+          margin-left: 4rem;
+        }
+      }
+
+      @media (max-width: $mobile) and (orientation: landscape) {
+        margin-top: 2rem;
+
+        span {
+          margin-left: 3rem;
+        }
+      }
+
+      @media (min-width: $stop-scaling) {
+        margin-top: 85px;
+
+        span {
+          margin-left: 80px;
         }
       }
     }
@@ -258,7 +320,7 @@
         width: 35rem;
 
         @media (max-width: $tablet) and (orientation: landscape) {
-          right: 52px;
+          right: 7.5rem;
           width: 17rem;
         }
 
@@ -274,6 +336,68 @@
         @media (min-width: $stop-scaling) {
           right: -19px;
           width: 470px;
+        }
+      }
+    }
+
+    .prizes__desc {
+      .prizes__count {
+        opacity: 0;
+        transition: opacity 0.1s ease-in 6.05s;
+
+        .screen--prizes.is-visited & {
+          opacity: 1;
+        }
+      }
+
+      span {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: opacity 0.3s ease-in 6.05s, transform 0.3s ease-in 6.05s;
+
+        .screen--prizes.is-visited & {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (orientation: portrait) {
+        .prizes__count,
+        span {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (orientation: landscape) {
+        margin-top: 8.3rem;
+
+        span {
+          margin-left: 6.8rem;
+        }
+      }
+
+      @media (max-width: $tablet) and (orientation: landscape) {
+        margin-top: 3rem;
+
+        span {
+          margin-left: 3.5rem;
+        }
+      }
+
+      @media (max-width: $mobile) and (orientation: landscape) {
+        margin-top: 2rem;
+
+        span {
+          margin-left: 2.5rem;
+        }
+      }
+
+      @media (min-width: $stop-scaling) {
+        margin-top: 85px;
+
+        span {
+          margin-left: 70px;
         }
       }
     }
@@ -326,7 +450,7 @@
         width: 35rem;
 
         @media (max-width: $tablet) and (orientation: landscape) {
-          left: -25px;
+          left: -15px;
           width: 13.5rem;
         }
 
@@ -341,6 +465,68 @@
         @media (min-width: $stop-scaling) {
           left: -63px;
           width: 485px;
+        }
+      }
+    }
+
+    .prizes__desc {
+      .prizes__count {
+        opacity: 0;
+        transition: opacity 0.1s ease-in 7.9s;
+
+        .screen--prizes.is-visited & {
+          opacity: 1;
+        }
+      }
+
+      span {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: opacity 0.3s ease-in 7.9s, transform 0.3s ease-in 7.9s;
+
+        .screen--prizes.is-visited & {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (orientation: portrait) {
+        .prizes__count,
+        span {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (orientation: landscape) {
+        margin-top: 8.3rem;
+
+        span {
+          margin-left: 20rem;
+        }
+      }
+
+      @media (max-width: $tablet) and (orientation: landscape) {
+        margin-top: 3rem;
+
+        span {
+          margin-left: 10.5rem;
+        }
+      }
+
+      @media (max-width: $mobile) and (orientation: landscape) {
+        margin-top: 2rem;
+
+        span {
+          margin-left: 6rem;
+        }
+      }
+
+      @media (min-width: $stop-scaling) {
+        margin-top: 85px;
+
+        span {
+          margin-left: 200px;
         }
       }
     }
@@ -360,20 +546,12 @@
 }
 
 .prizes__desc {
+  position: relative;
   display: flex;
   align-items: flex-end;
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
   line-height: 1.1;
-
-  @media (orientation: landscape) {
-    opacity: 0;
-    transition: opacity 0.2s ease-in 3.05s;
-
-    .screen--prizes.is-visited & {
-      opacity: 1;
-    }
-  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 56px;
@@ -392,18 +570,24 @@
 
   @media (max-width: $tablet) and (orientation: landscape) {
     margin-top: 3rem;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
     font-size: 0.8rem;
   }
 
-  b {
+  .prizes__count {
     font-family: $font-alt;
     font-weight: 400;
     font-size: 12rem;
     line-height: 0.55;
+
+    @media (orientation: landscape) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
     @media (min-width: $stop-scaling) {
       font-size: 120px;
