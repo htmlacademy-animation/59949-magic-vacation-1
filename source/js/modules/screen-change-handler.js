@@ -1,4 +1,4 @@
-import {initSVGAnimation} from './prizes-svg';
+import {initSVGAnimation, animatePrizesCount} from './prizes-svg';
 import textTransform from './text-transform';
 import slider from './slider';
 import Timer from './game-timer';
@@ -25,6 +25,7 @@ export default () => {
 
         if (!evt.detail.screenElement.classList.contains(`is-visited`)) {
           initSVGAnimation();
+          animatePrizesCount();
 
           setTimeout(() => {
             evt.detail.screenElement.classList.add(`is-visited`);
