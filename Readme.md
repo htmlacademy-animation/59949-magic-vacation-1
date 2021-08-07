@@ -1,5 +1,9 @@
 # Личный проект «Таинственный отпуск» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
+### node ver 14.16.1
+
+---
+
 * Студент: [Сергей Иншаков](https://up.htmlacademy.ru/animation/1/user/59949).
 
 ---
