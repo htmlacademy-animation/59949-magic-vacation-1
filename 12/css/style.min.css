@@ -2586,7 +2586,7 @@ img {
 }
 .prizes__item--journeys .prizes__desc span {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateX(3rem);
   transition: opacity 0.3s ease-in 3.05s, transform 0.3s ease-in 3.05s;
 }
 .screen--prizes.is-visited .prizes__item--journeys .prizes__desc span {
@@ -2725,7 +2725,7 @@ img {
 }
 .prizes__item--cases .prizes__desc span {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateX(3rem);
   transition: opacity 0.3s ease-in 6.05s, transform 0.3s ease-in 6.05s;
 }
 .screen--prizes.is-visited .prizes__item--cases .prizes__desc span {
@@ -2851,7 +2851,7 @@ img {
 }
 .prizes__item--codes .prizes__desc span {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateX(3rem);
   transition: opacity 0.3s ease-in 7.9s, transform 0.3s ease-in 7.9s;
 }
 .screen--prizes.is-visited .prizes__item--codes .prizes__desc span {
